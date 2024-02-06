@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 개인 프로젝트 - 쇼핑몰 프로젝트
+- **개인 학습 목적의 프로젝트 입니다.**
+- Next.js를 사용해보기 위한 목적의 프로젝트 입니다
 
-## Getting Started
+# Skill
+- FE : Next.js 14.1.0, Typescript, TailwindCSS
+- BE : Express.js, Prisma, MySQL
 
-First, run the development server:
+## 왜 백엔드를 분리하는가?
+- 그동안 백엔드 개발을 Express.js로 많이 진행하였음.
+- 서버쪽을 Express.js로 하고 나중에 여유가 된다면 일부 API를 api 폴더를 통해 시도해볼 예정.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 우선 순위
+1. 일단 쇼핑몰에 들어갈 기능을 먼저 구현
+2. 이후 리팩토링 과정에서 기존 코드를 개선 -> 예시 : SSR을 적용하지 않던 부분을 SSR 적용하는 등.
+3. 이후 컴포넌트 덩어리로 세분화가 가능한 부분에 대해 세분화 실시.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+요약 : 일단 기능먼저 완성시키고 세분화는 이후에 진행한다, 전체적으로 완성부터 시키고 보자
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Favicon 출처
+https://www.flaticon.com/kr/free-icon/computer-science_9401652?term=computer&page=1&position=38&origin=search&related_id=9401652
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
