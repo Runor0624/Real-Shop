@@ -1,18 +1,20 @@
-import "./globals.css";
-import ReactQuery from "./Util/ReactQuery";
+import Nav from '@/components/Common/Nav'
+import Footers from '@/components/Common/Footer'
+import './globals.css'
+import ReactQuery from './Util/ReactQuery'
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
-        <ReactQuery>
-            {children}
-        </ReactQuery>
+        <Nav />
+        <ReactQuery>{children}</ReactQuery>
+        <Footers />
       </body>
     </html>
-  );
+  )
 }

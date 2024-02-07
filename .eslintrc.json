@@ -1,3 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"]
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "rules": {  // Line3 - Line10 : 윈도우에서 Prettier 에러 뜨는 부분 수정
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
 }
