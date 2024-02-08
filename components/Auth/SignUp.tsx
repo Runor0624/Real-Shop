@@ -9,6 +9,7 @@
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { AiOutlineUserAdd } from 'react-icons/ai'
 
 export default function SignUpComponent() {
   const Temp = () => {
@@ -30,7 +31,7 @@ export default function SignUpComponent() {
       />
 
       <button className='my-2 btn btn-success' onClick={() => Temp}>
-        SignUp
+        <AiOutlineUserAdd /> SignUp
       </button>
     </form>
   )

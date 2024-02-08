@@ -1,4 +1,5 @@
 // 프로젝트 전역의 에러 페이지로 사용합니다.
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -22,7 +23,7 @@ export default function Notfound() {
         href='/'
         className='text-center text-white font-bold bg-black h-10 py-2'
       >
-        메인 페이지로 돌아가기
+        <AiOutlineArrowLeft /> 메인 페이지로 돌아가기
       </Link>
     </section>
   )

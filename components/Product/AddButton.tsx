@@ -2,6 +2,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import { AiOutlinePlus } from 'react-icons/ai'
 
 export default function ProductAddButton() {
   const router = useRouter()
@@ -11,7 +12,7 @@ export default function ProductAddButton() {
         className='btn btn-success text-white'
         onClick={() => router.push('/product/add')}
       >
-        Add
+        <AiOutlinePlus /> Add
       </button>
     </>
   )

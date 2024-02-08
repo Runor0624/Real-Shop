@@ -5,6 +5,7 @@
 3. react-toastify 등 으로 사용자에게 로그인 성공/실패를 인지시킬것.
 */
 }
+import { AiOutlineUnlock } from 'react-icons/ai'
 
 export default function LoginComponent() {
   return (
@@ -23,7 +24,7 @@ export default function LoginComponent() {
       />
 
       <button className='my-2 btn btn-success' type='submit'>
-        Login
+        <AiOutlineUnlock /> Login
       </button>
     </form>
   )

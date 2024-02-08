@@ -1,4 +1,6 @@
 import SignUpComponent from '@/components/Auth/SignUp'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
+
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -19,7 +21,7 @@ export default function Page() {
           href='/login'
           className='text-center text-sm text-slate-300 font-bold py-2'
         >
-          회원이면 여기로 이동하세요!
+          <AiOutlineInfoCircle /> 회원이면 여기로 이동하세요!
         </Link>
       </section>
     </>
