@@ -13,6 +13,9 @@ export default function Home() {
       <p className='text-center text-xl text-red-600 font-bold'>
         나는 메인 페이지 - 개인 프로젝트 초안.
       </p>
+      <section>
+        <p>여기는 React-Slick로 캐러셀을 넣어야 하나?</p>
+      </section>
       <Link href='/signup' className='mx-2'>
         회원가입 페이지
       </Link>
