@@ -1,11 +1,17 @@
 // Header
+'use client'
+
+import { useRouter } from 'next/navigation'
 
 export default function Nav() {
+  const router = useRouter()
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
         <div className='flex-1'>
-          <a className='btn btn-ghost text-xl'>Logo-Temp</a>
+          <a className='btn btn-ghost text-xl' onClick={() => router.push('/')}>
+            Logo-Temp
+          </a>
         </div>
         <div className='flex-none gap-2'>
           <div className='dropdown dropdown-end'>

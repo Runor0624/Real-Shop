@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import ProductAddButton from '@/components/Product/AddButton'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Main Page',
@@ -27,6 +28,7 @@ export default function Home() {
       <Link href='/complete' className='mx-2'>
         구매 성공시 보여지는 페이지
       </Link>
+      <ProductAddButton />
     </>
   )
 }
