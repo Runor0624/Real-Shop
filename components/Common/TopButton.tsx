@@ -30,7 +30,7 @@ export default function TopButton() {
   return (
     <>
       {isShowBtn && (
-        <section className='fixed right-4 bottom-6'>
+        <section className='fixed right-2 bottom-6'>
           <AiOutlineArrowUp onClick={scrolTop} />
         </section>
       )}

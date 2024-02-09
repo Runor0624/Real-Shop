@@ -23,11 +23,17 @@ export default function DarkMode() {
   const currentTheme = theme === 'system' ? systemTheme : theme
 
   return (
-    <div className='bg-darkModeBg cursor-pointer p-1 z-20'>
+    <div className='bg-darkModeBg cursor-pointer fixed right-14 bottom-6 bg-white rounded-xl z-20'>
       {currentTheme === 'dark' ? (
-        <BsFillMoonFill onClick={onClick('light')} />
+        <BsFillMoonFill
+          onClick={onClick('light')}
+          className='text-center text-xl'
+        />
       ) : (
-        <BsFillSunFill onClick={onClick('dark')} className='text-white' />
+        <BsFillSunFill
+          onClick={onClick('dark')}
+          className='text-center text-xl'
+        />
       )}
     </div>
   )
