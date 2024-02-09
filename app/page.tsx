@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <p className='text-center text-xl text-red-600 font-bold'>
+      <h1 className='text-center text-xl text-red-600 font-bold'>
         나는 메인 페이지 - 개인 프로젝트 초안.
-      </p>
+      </h1>
       <section className='w-full h-1/4'>
         <Banner />
       </section>

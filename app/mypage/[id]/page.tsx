@@ -9,8 +9,10 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <section className='flex flex-col justify-center items-center m-auto my-6 border border-slate-300 rounded-md w-1/2'>
-      <h1 className='text-2xl font-bold py-4'>사용자 마이 페이지 입니다</h1>
+    <section className='flex flex-col justify-center items-center m-auto my-6 w-1/2'>
+      <h1 className='text-2xl text-red-600 text-center font-bold py-4'>
+        사용자 마이 페이지 입니다
+      </h1>
 
       <input
         placeholder='아마도 사용자의 가입시 입력한 ID가 들어갈 부분입니다.'

@@ -27,12 +27,12 @@ export default function DarkMode() {
       {currentTheme === 'dark' ? (
         <BsFillMoonFill
           onClick={onClick('light')}
-          className='text-center text-xl'
+          className='text-center text-xl m-2'
         />
       ) : (
         <BsFillSunFill
           onClick={onClick('dark')}
-          className='text-center text-xl'
+          className='text-center text-xl m-2'
         />
       )}
     </div>

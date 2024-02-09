@@ -16,7 +16,7 @@ export default function SignUpComponent() {
     toast.success('회원가입 성공.', { autoClose: 1000, pauseOnHover: false })
   }
   return (
-    <form className='w-2/3 border border-slate-300 rounded-md flex flex-col justify-center items-center m-auto my-2'>
+    <form className='w-2/3 flex flex-col justify-center items-center m-auto my-2'>
       <label className='py-2 font-bold'>UserID</label>
       <input
         className='w-2/3 h-10 rounded-md'
@@ -25,9 +25,14 @@ export default function SignUpComponent() {
 
       <label className='py-2 font-bold'>Password</label>
       <input
-        className='w-2/3 h-10 rounded-md'
+        className='w-2/3 h-10 rounded-md my-2'
         type='password'
         placeholder='사용할 비밀번호를 입력하세요'
+      />
+
+      <input
+        className='w-2/3 h-10 rounded-md my-2'
+        value='아마도 여기는 권한 관련 값이 투입될것.'
       />
 
       <button className='my-2 btn btn-success' onClick={() => Temp}>
