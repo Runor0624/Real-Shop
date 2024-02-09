@@ -1,6 +1,8 @@
 import Nav from '@/components/Common/Nav'
 import Footers from '@/components/Common/Footer'
 import TopButton from '@/components/Common/TopButton'
+import DarkModeProviders from '@/components/Common/DarkMode/DarkModeProvider'
+import DarkMode from '@/components/Common/DarkMode/DarkMode'
 
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -16,11 +18,14 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <Nav />
-        <ToastContainer />
-        <ReactQuery>{children}</ReactQuery>
-        <Footers />
-        <TopButton />
+        <DarkModeProviders>
+          <Nav />
+          <ToastContainer />
+          <ReactQuery>{children}</ReactQuery>
+          <Footers />
+          <TopButton />
+          <DarkMode />
+        </DarkModeProviders>
       </body>
     </html>
   )
