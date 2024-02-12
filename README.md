@@ -21,6 +21,8 @@
 https://www.flaticon.com/kr/free-icon/computer-science_9401652?term=computer&page=1&position=38&origin=search&related_id=9401652
 
 
-# [추후 제거 필요] - 오늘은 어떤걸 해야할까 - 20240207
-- [ ] 각 페이지 **초안** 필요 -> Login, SignUp, MyPage, Product, Cart, 구매 성공시 페이지.
-- [ ] 전역 상태관리 뭐 쓸지 찾을것 -> 새로고침해도 상태가 초기화되면 안됨 -> Redux-toolkit?
+# [추후 제거 필요] - 이후 진행할 내용
+- [ x ] 백엔드 배포서버 준비 (별도 백엔드 개발중)
+- [ ] 방명록 관련 기능 추가 필요 + 백엔드 통신 (익명 방명록 개념 - 예시 : DC인사이드)
+- [ ] 로그인의 경우 Zustand로 전역 상태관리 필요
+- [ ] 이후 전반적인 API와 연동하는 개발 단계 필요함 - 상품 등록 등.
