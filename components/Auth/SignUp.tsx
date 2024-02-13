@@ -7,9 +7,6 @@
 */
 }
 
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { AiOutlineUserAdd } from 'react-icons/ai'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'

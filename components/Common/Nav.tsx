@@ -1,10 +1,13 @@
 // Header
 'use client'
 
+import { useAuthStore } from '@/app/Util/Zustand/store'
 import { useRouter } from 'next/navigation'
 
 export default function Nav() {
   const router = useRouter()
+  const { isAuthenticated } = useAuthStore((state) => state)
+  console.log(isAuthenticated)
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
