@@ -20,7 +20,7 @@ export default function Nav() {
   }
   console.log(audit)
   console.log(userId)
-  console.log(id)
+  console.log(id, 'id')
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
