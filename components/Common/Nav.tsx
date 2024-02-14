@@ -6,11 +6,21 @@ import { useRouter } from 'next/navigation'
 
 export default function Nav() {
   const router = useRouter()
-  const { userId, audit } = useAuthStore((state) => ({
+  const { userId, audit, id, logout } = useAuthStore((state) => ({
     userId: state.userId,
     audit: state.audit,
+    id: state.id,
+    logout: state.logout,
   }))
+
+  const handleLogout = () => {
+    logout()
+    alert('로그아웃 성공!')
+    router.push('/login')
+  }
   console.log(audit)
+  console.log(userId)
+  console.log(id)
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
@@ -36,18 +46,18 @@ export default function Nav() {
               <li>
                 <a onClick={() => router.push('/mypage/1')}>Admin</a>
               </li>
-              <li>
-                <a onClick={() => router.push('/mypage/1')}>MyPage</a>
-              </li>
-              <li>
-                <a onClick={() => router.push('/login')}>LogIn</a>
-              </li>
-              <li>
-                <a onClick={() => router.push('/signup')}>SignUp</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
+              {audit.length >= 1 && userId.length >= 1 && (
+                <li>
+                  <a onClick={() => router.push(`/mypage/${id}`)}>MyPage</a>
+                  <a onClick={handleLogout}>Logout</a>
+                </li>
+              )}
+              {audit.length === 0 && userId.length === 0 && (
+                <li>
+                  <a onClick={() => router.push('/login')}>LogIn</a>
+                  <a onClick={() => router.push('/signup')}>SignUp</a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

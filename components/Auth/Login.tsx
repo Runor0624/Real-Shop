@@ -35,7 +35,8 @@ export default function LoginComponent() {
       )
       alert('성공')
       login({
-        userId: response.data.id,
+        id: response.data.id,
+        userId: response.data.userId,
         audit: response.data.audit,
       })
       router.push('/')

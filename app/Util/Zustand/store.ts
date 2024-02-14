@@ -4,22 +4,37 @@ import { persist } from 'zustand/middleware'
 
 interface AuthState {
   isAuthenticated: boolean
+  id: string | number
   userId: string
   audit: string
-  login: (authData: { userId: string; audit: string }) => void
+  login: (authData: {
+    id: string | number
+    userId: string
+    audit: string
+  }) => void
+  logout: () => void
 }
 
 export const useAuthStore = create(
   persist<AuthState>(
     (set) => ({
       isAuthenticated: false,
+      id: '',
       userId: '',
       audit: '',
       login: (authData) =>
         set({
           isAuthenticated: true,
+          id: authData.id,
           userId: authData.userId,
-          audit: authData.audit, // 서버에서 받아온 값 설정
+          audit: authData.audit,
+        }),
+      logout: () =>
+        set({
+          isAuthenticated: false,
+          userId: '',
+          audit: '',
+          id: '',
         }),
     }),
     {
