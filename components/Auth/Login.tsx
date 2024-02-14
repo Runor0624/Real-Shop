@@ -34,7 +34,10 @@ export default function LoginComponent() {
         data,
       )
       alert('성공')
-      login()
+      login({
+        userId: response.data.id,
+        audit: response.data.audit,
+      })
       router.push('/')
     } catch (err: any) {
       alert('실패')

@@ -6,8 +6,11 @@ import { useRouter } from 'next/navigation'
 
 export default function Nav() {
   const router = useRouter()
-  const { isAuthenticated } = useAuthStore((state) => state)
-  console.log(isAuthenticated)
+  const { userId, audit } = useAuthStore((state) => ({
+    userId: state.userId,
+    audit: state.audit,
+  }))
+  console.log(audit)
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
