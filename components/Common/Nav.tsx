@@ -18,9 +18,7 @@ export default function Nav() {
     alert('로그아웃 성공!')
     router.push('/login')
   }
-  console.log(audit)
-  console.log(userId)
-  console.log(id, 'id')
+
   return (
     <>
       <div className='navbar border-b-2 border-slate-300'>
@@ -43,9 +41,11 @@ export default function Nav() {
               tabIndex={0}
               className='mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-22'
             >
-              <li>
-                <a onClick={() => router.push('/mypage/1')}>Admin</a>
-              </li>
+              {audit === `${process.env.NEXT_PUBLIC_ADMIN_AUDIT}` && (
+                <li>
+                  <a onClick={() => router.push('/mypage/1')}>Admin</a>
+                </li>
+              )}
               {audit.length >= 1 && userId.length >= 1 && (
                 <li>
                   <a onClick={() => router.push(`/mypage/${id}`)}>MyPage</a>

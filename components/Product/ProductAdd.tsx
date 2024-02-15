@@ -3,9 +3,12 @@
 export default function ProductAdd() {
   return (
     <>
-      <form>
-        <h1>상품추가</h1>
-        <p>무슨 항목이 들어갈까? - 상품 제목, 설명, 가격, 이미지?</p>
+      <form className='flex flex-col justify-center items-center'>
+        <input placeholder='상품 제목' />
+        <input placeholder='상품 설명' />
+        <input placeholder='가격' />
+        <input placeholder='이미지' />
+        <button>ADD</button>
       </form>
     </>
   )

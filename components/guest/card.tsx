@@ -10,7 +10,6 @@ const Card = async () => {
     next: { revalidate: 5 },
   })
   const Cards: CardTypes[] = await res.json()
-  console.log(Cards)
   return (
     <>
       {Cards.map((item: CardTypes) => (

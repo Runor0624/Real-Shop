@@ -16,7 +16,12 @@ export default function Page() {
         사용자 마이 페이지 입니다
       </h1>
       <MyPage />
-      <Link href='/'>Go To Main</Link>
+
+      <div className='flex flex-row justify-center'>
+        <Link href='/' className='text-center'>
+          Go To Main
+        </Link>
+      </div>
     </>
   )
 }
