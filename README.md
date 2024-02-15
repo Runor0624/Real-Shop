@@ -24,5 +24,3 @@ https://www.flaticon.com/kr/free-icon/computer-science_9401652?term=computer&pag
 # [추후 제거 필요] - 이후 진행할 내용
 - [ x ] 백엔드 배포서버 준비 (별도 백엔드 개발중)
 - [ ] 방명록 관련 기능 추가 필요 + 백엔드 통신 (익명 방명록 개념 - 예시 : DC인사이드)
-- [ ] 로그인의 경우 Zustand로 전역 상태관리 필요
-- [ ] 이후 전반적인 API와 연동하는 개발 단계 필요함 - 상품 등록 등.
