@@ -3,11 +3,7 @@
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-
-interface CardAddType {
-  userId: string
-  comment: string
-}
+import { GuestCardAddType } from '@/Types/Types'
 
 export default function Add() {
   const router = useRouter()
@@ -16,9 +12,9 @@ export default function Add() {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm<CardAddType>()
+  } = useForm<GuestCardAddType>()
 
-  const onSubmit = async (data: CardAddType) => {
+  const onSubmit = async (data: GuestCardAddType) => {
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_URL_KEY}/guest`,

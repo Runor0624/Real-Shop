@@ -4,13 +4,6 @@ import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { useParams } from 'next/navigation'
 
-interface MyPageType {
-  id: number | string
-  audit: string
-  userId: string
-  createDate: string
-}
-
 export default function MyPage() {
   const params = useParams()
 

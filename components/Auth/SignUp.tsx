@@ -10,12 +10,7 @@
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-
-interface SignUpType {
-  userId: string
-  password: string
-  audit: string
-}
+import { SignUpType } from '@/Types/Types'
 
 export default function SignUpComponent() {
   const router = useRouter()

@@ -11,11 +11,7 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { useAuthStore } from '@/app/Util/Zustand/store'
-
-interface LoginType {
-  userId: string
-  password: string
-}
+import { LoginType } from '@/Types/Types'
 
 export default function LoginComponent() {
   const router = useRouter()
