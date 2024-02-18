@@ -49,19 +49,22 @@ export default function LoginComponent() {
       <label className='py-2 font-bold'>UserID</label>
       <input
         {...register('userId', { required: true })}
-        className='w-2/3 h-10 rounded-md'
+        className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='가입한 UserId를 입력하세요'
       />
 
       <label className='py-2 font-bold'>Password</label>
       <input
         {...register('password', { required: true })}
-        className='w-2/3 h-10 rounded-md'
+        className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         type='password'
         placeholder='가입한 비밀번호를 입력하세요'
       />
 
-      <button className='my-2 btn btn-success' type='submit'>
+      <button
+        className='my-2 btn btn-md btn-success text-white w-full sm:w-1/2'
+        type='submit'
+      >
         <AiOutlineUnlock /> Login
       </button>
     </form>

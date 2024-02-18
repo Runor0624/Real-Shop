@@ -22,19 +22,19 @@ export default function MyPage() {
       <section className='flex flex-col justify-center items-center m-auto my-6 w-1/2'>
         <input
           placeholder='아마도 사용자의 가입시 입력한 ID가 들어갈 부분입니다.'
-          className='w-1/2 h-10 rounded-md my-2 text-blue-500'
+          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && data.userId}
         />
 
         <input
           placeholder='아마도 사용자의 가입시간이 들어갈 부분입니다.'
-          className='w-1/2 h-10 rounded-md my-2 text-blue-500'
+          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && data.createDate}
         />
 
         <input
           placeholder='아마도 사용자의 권한이 들어갈 부분입니다.'
-          className='w-1/2 h-10 rounded-md my-2 text-blue-500'
+          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && data.audit}
         />
       </section>

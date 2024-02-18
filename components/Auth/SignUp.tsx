@@ -11,6 +11,7 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { SignUpType } from '@/Types/Types'
+import { AiOutlinePlus } from 'react-icons/ai'
 
 export default function SignUpComponent() {
   const router = useRouter()
@@ -40,13 +41,13 @@ export default function SignUpComponent() {
       <label className='py-2 font-bold'>UserID</label>
       <input
         {...register('userId', { required: true })}
-        className='w-2/3 h-10 rounded-md bg-white'
+        className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='사용할 UserId를 입력하세요'
       />
 
       <label className='py-2 font-bold'>Password</label>
       <input
-        className='w-2/3 h-10 rounded-md my-2 bg-white'
+        className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         {...register('password', { required: true })}
         type='password'
         placeholder='사용할 비밀번호를 입력하세요'
@@ -58,7 +59,12 @@ export default function SignUpComponent() {
         value='0006'
       />
 
-      <button type='submit'>SignUp</button>
+      <button
+        className='my-2 btn btn-md btn-success text-white w-full sm:w-1/2'
+        type='submit'
+      >
+        <AiOutlinePlus /> SignUp
+      </button>
     </form>
   )
 }

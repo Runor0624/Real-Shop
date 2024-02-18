@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { AiOutlineEdit } from 'react-icons/ai'
 
 // Footer Components
 export default function Footers() {
@@ -9,7 +10,7 @@ export default function Footers() {
         href='/guest'
         className='text-center font-bold text-blue-500 cursor-pointer'
       >
-        방명록
+        <AiOutlineEdit /> 방명록
       </Link>
     </footer>
   )
