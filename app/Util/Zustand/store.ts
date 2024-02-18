@@ -1,6 +1,6 @@
 'use client'
 import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { createJSONStorage, persist } from 'zustand/middleware'
 
 interface AuthState {
   isAuthenticated: boolean
@@ -25,9 +25,9 @@ export const useAuthStore = create(
       login: (authData) =>
         set({
           isAuthenticated: true,
-          id: JSON.stringify(authData.id),
-          userId: JSON.stringify(authData.userId),
-          audit: JSON.stringify(authData.audit),
+          id: authData.id,
+          userId: authData.userId,
+          audit: authData.audit,
         }),
       logout: () =>
         set({
@@ -39,7 +39,7 @@ export const useAuthStore = create(
     }),
     {
       name: 'auth',
-      storage: sessionStorage as any,
+      storage: createJSONStorage(() => sessionStorage as any),
     },
   ),
 )
