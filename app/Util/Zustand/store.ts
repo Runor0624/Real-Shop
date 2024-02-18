@@ -25,9 +25,9 @@ export const useAuthStore = create(
       login: (authData) =>
         set({
           isAuthenticated: true,
-          id: authData.id,
-          userId: authData.userId,
-          audit: authData.audit,
+          id: JSON.stringify(authData.id),
+          userId: JSON.stringify(authData.userId),
+          audit: JSON.stringify(authData.audit),
         }),
       logout: () =>
         set({
@@ -39,6 +39,7 @@ export const useAuthStore = create(
     }),
     {
       name: 'auth',
+      storage: sessionStorage as any,
     },
   ),
 )
