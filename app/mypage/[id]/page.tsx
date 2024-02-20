@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import MyPage from '@/components/Auth/MyPage'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 export const metadata: Metadata = {
   title: 'My Page',
@@ -18,9 +19,12 @@ export default function Page() {
       <MyPage />
 
       <div className='flex flex-row justify-center'>
-        <Link href='/' className='text-center'>
-          Go To Main
-        </Link>
+        <>
+          <AiOutlineArrowLeft className='m-2 text-blue-500' />
+          <Link href='/' className='text-center text-blue-500 font-bold m-1'>
+            Go To Main
+          </Link>
+        </>
       </div>
     </>
   )

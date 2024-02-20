@@ -3,6 +3,14 @@
 
 import { useAuthStore } from '@/app/Util/Zustand/store'
 import { useRouter } from 'next/navigation'
+import {
+  AiOutlineArrowLeft,
+  AiOutlineHome,
+  AiOutlineLogout,
+  AiOutlineSolution,
+  AiOutlineLogin,
+  AiOutlinePlus,
+} from 'react-icons/ai'
 
 export default function Nav() {
   const router = useRouter()
@@ -43,19 +51,32 @@ export default function Nav() {
             >
               {audit === `${process.env.NEXT_PUBLIC_ADMIN_AUDIT}` && (
                 <li>
-                  <a onClick={() => router.push('/mypage/1')}>Admin</a>
+                  <a onClick={() => router.push('/mypage/1')}>
+                    <AiOutlineHome />
+                    Admin
+                  </a>
                 </li>
               )}
               {audit.length >= 1 && userId.length >= 1 && (
                 <li>
-                  <a onClick={() => router.push(`/mypage/${id}`)}>MyPage</a>
-                  <a onClick={handleLogout}>Logout</a>
+                  <a onClick={() => router.push(`/mypage/${id}`)}>
+                    <AiOutlineSolution /> MyPage
+                  </a>
+                  <a onClick={handleLogout}>
+                    <AiOutlineLogout />
+                    Logout
+                  </a>
                 </li>
               )}
               {audit.length === 0 && userId.length === 0 && (
                 <li>
-                  <a onClick={() => router.push('/login')}>LogIn</a>
-                  <a onClick={() => router.push('/signup')}>SignUp</a>
+                  <a onClick={() => router.push('/login')}>
+                    <AiOutlineLogin /> LogIn
+                  </a>
+                  <a onClick={() => router.push('/signup')}>
+                    <AiOutlinePlus />
+                    SignUp
+                  </a>
                 </li>
               )}
             </ul>

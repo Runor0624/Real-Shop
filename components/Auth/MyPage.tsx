@@ -2,6 +2,7 @@
 
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import moment from 'moment'
 import { useParams } from 'next/navigation'
 
 export default function MyPage() {
@@ -20,22 +21,17 @@ export default function MyPage() {
   return (
     <>
       <section className='flex flex-col justify-center items-center m-auto my-6 w-1/2'>
+        <label className='text-blue-500 font-bold py-4'>사용자 명</label>
         <input
           placeholder='아마도 사용자의 가입시 입력한 ID가 들어갈 부분입니다.'
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && data.userId}
         />
-
+        <label className='text-blue-500 font-bold py-4'>가입 시간</label>
         <input
           placeholder='아마도 사용자의 가입시간이 들어갈 부분입니다.'
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
-          value={data && data.createDate}
-        />
-
-        <input
-          placeholder='아마도 사용자의 권한이 들어갈 부분입니다.'
-          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
-          value={data && data.audit}
+          value={data && moment(data.createDate).format('YYYY-MM-DD HH:mm:ss')}
         />
       </section>
     </>
