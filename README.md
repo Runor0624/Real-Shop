@@ -2,6 +2,10 @@
 - **개인 학습 목적의 프로젝트 입니다.**
 - Next.js를 사용해보기 위한 목적의 프로젝트 입니다
 
+### 왜 프로젝트 제목이 Real-Shop인가?
+- 계속 토이프로젝트를 진행하다 도중에 포기하는 경우가 매우 많았으며
+- 차라리 조금씩 계속 해서라도 이번에는 완료를 목표로 할것이기에 일단 임시로 제목을 그렇게 선정하였음.
+
 # Skill
 - FE : Next.js 14.1.0, Typescript, TailwindCSS
 - BE : Express.js, Prisma, MySQL
@@ -19,8 +23,3 @@
 
 # Favicon 출처
 https://www.flaticon.com/kr/free-icon/computer-science_9401652?term=computer&page=1&position=38&origin=search&related_id=9401652
-
-
-# [추후 제거 필요] - 이후 진행할 내용
-- [ x ] 백엔드 배포서버 준비 (별도 백엔드 개발중)
-- [ ] 방명록 관련 기능 추가 필요 + 백엔드 통신 (익명 방명록 개념 - 예시 : DC인사이드)

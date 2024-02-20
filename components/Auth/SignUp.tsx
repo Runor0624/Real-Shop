@@ -38,14 +38,14 @@ export default function SignUpComponent() {
       onSubmit={handleSubmit(onSubmit)}
       className='w-2/3 flex flex-col justify-center items-center m-auto my-2'
     >
-      <label className='py-2 font-bold'>UserID</label>
+      <label className='py-2 text-blue-500 font-bold'>UserID</label>
       <input
         {...register('userId', { required: true })}
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='사용할 UserId를 입력하세요'
       />
 
-      <label className='py-2 font-bold'>Password</label>
+      <label className='py-2 text-blue-500 font-bold'>Password</label>
       <input
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         {...register('password', { required: true })}

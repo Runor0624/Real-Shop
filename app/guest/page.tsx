@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <h1 className='text-center font-bold m-2'>
+      <h1 className='text-center text-blue-500 font-bold m-2'>
         해당 페이지 목적 : 익명으로 방명록을 남기도록 합니다.
       </h1>
       <Add />

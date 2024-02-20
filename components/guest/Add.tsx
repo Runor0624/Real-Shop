@@ -34,7 +34,9 @@ export default function Add() {
         onSubmit={handleSubmit(onSubmit)}
         className='w-1/2 flex flex-col justify-center items-center m-auto my-4'
       >
-        <h1 className='text-center text-xl font-bold py-2'>방명록 추가</h1>
+        <h1 className='text-center text-xl text-blue-500 font-bold py-2'>
+          방명록 추가
+        </h1>
         <input
           placeholder='userId'
           {...register('userId', { required: true })}

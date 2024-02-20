@@ -44,16 +44,16 @@ export default function LoginComponent() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='w-2/3 border border-slate-300 rounded-md flex flex-col justify-center items-center m-auto my-2'
+      className='w-2/3 flex flex-col justify-center items-center m-auto my-2'
     >
-      <label className='py-2 font-bold'>UserID</label>
+      <label className='py-2 text-blue-500 font-bold'>UserID</label>
       <input
         {...register('userId', { required: true })}
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='가입한 UserId를 입력하세요'
       />
 
-      <label className='py-2 font-bold'>Password</label>
+      <label className='py-2 text-blue-500 font-bold'>Password</label>
       <input
         {...register('password', { required: true })}
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'

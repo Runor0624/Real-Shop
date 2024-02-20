@@ -27,7 +27,7 @@ export default function Nav() {
             className='btn btn-ghost text-xl text-blue-500'
             onClick={() => router.push('/')}
           >
-            Logo-Temp
+            Real-Shop
           </a>
         </div>
         <div className='flex-none gap-2'>
