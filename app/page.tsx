@@ -1,4 +1,5 @@
 import ProductAddButton from '@/components/Product/AddButton'
+import ProductCard from '@/components/Product/Card/Card'
 import Banner from '@/components/Product/Slick/Slick'
 import type { Metadata } from 'next'
 
@@ -16,6 +17,7 @@ export default function Home() {
       <section className='w-full h-1/4'>
         <Banner />
       </section>
+      <ProductCard />
       <ProductAddButton />
     </>
   )
