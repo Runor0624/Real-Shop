@@ -1,3 +1,4 @@
+import GoToCartButton from '@/components/Cart/GoToCartButton'
 import DetailImage from './DetailImage'
 
 export default function DetailInfomation() {
@@ -13,6 +14,7 @@ export default function DetailInfomation() {
           <h1 className='text-blue-500 text-center text-2xl font-bold py-4'>
             상품 이미지 이외 가격등 정보를 보여주는 부분
           </h1>
+          <GoToCartButton />
         </div>
       </section>
       <DetailImage />
