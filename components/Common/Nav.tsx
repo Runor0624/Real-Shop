@@ -4,7 +4,6 @@
 import { useAuthStore } from '@/app/Util/Zustand/store'
 import { useRouter } from 'next/navigation'
 import {
-  AiOutlineArrowLeft,
   AiOutlineHome,
   AiOutlineLogout,
   AiOutlineSolution,
@@ -51,7 +50,7 @@ export default function Nav() {
             >
               {audit === `${process.env.NEXT_PUBLIC_ADMIN_AUDIT}` && (
                 <li>
-                  <a onClick={() => router.push('/mypage/1')}>
+                  <a onClick={() => router.push('/admin')}>
                     <AiOutlineHome />
                     Admin
                   </a>

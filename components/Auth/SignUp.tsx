@@ -1,12 +1,4 @@
 'use client'
-
-{
-  /* 이후 진행할 내용
-1. react-toastify 등 으로 사용자에게 회원가입 성공/실패를 인지시킬것.
-2. React-hook-form을 사용하여 통신 관련 부분을 처리할것.
-*/
-}
-
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
