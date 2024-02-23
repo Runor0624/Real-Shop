@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1 className='text-red-600 text-center text-xl font-bold py-4'>아마도 장바구니 페이지 초안</h1>
+      <h1 className='text-red-600 text-center text-xl font-bold py-4'>
+        아마도 장바구니 페이지 초안
+      </h1>
       <section className='grid grid-cols-2 justify-items-center	my-4'>
         <div className='w-4/5 border border-blue-500 rounded-md'>
           <h1 className='text-blue-500 text-center text-2xl font-bold py-4'>
@@ -18,7 +20,7 @@ export default function Page() {
         </div>
         <div className='w-1/3 border border-blue-500 rounded-md'>
           <h1 className='text-blue-500 text-center text-2xl font-bold py-4'>
-            사용자에 관련한 정보 
+            사용자에 관련한 정보
           </h1>
         </div>
       </section>
