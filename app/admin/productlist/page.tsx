@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <h1 className='text-center text-blue-500'>상품 리스트</h1>
+      <h1 className='text-center text-xl text-blue-500 font-bold py-2'>
+        모든 상품 리스트를 표 형태로 제공하는 페이지 입니다
+      </h1>
       <ProductList />
     </>
   )

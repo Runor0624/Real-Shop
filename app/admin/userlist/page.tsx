@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <h1 className='text-center text-blue-500'>사용자 리스트</h1>
+      <h1 className='text-center text-xl text-blue-500 font-bold'>
+        사용자 리스트 - 이후 강제 탈퇴 추가 예정.
+      </h1>
       <UserList />
     </>
   )

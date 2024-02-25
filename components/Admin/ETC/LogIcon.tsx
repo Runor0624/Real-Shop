@@ -7,25 +7,20 @@ export default function LogIcon() {
       <section className='grid grid-cols-4 justify-items-center'>
         <div className='w-1/2 border border-blue-500 rounded-md my-6'>
           <Link href='/admin/userlist'>
-            <p className='text-blue-500 text-center font-bold py-4'>
-              Temp-UserList
-            </p>
+            <p className='text-blue-500 text-center font-bold py-4'>UserList</p>
           </Link>
         </div>
         <div className='w-1/2 border border-blue-500 rounded-md my-6'>
           <Link href='/admin/productlist'>
             <p className='text-blue-500 text-center font-bold py-4'>
-              Temp-ProductList
+              ProductList
             </p>
           </Link>
         </div>
         <div className='w-1/2 border border-blue-500 rounded-md my-6'>
           <p className='text-blue-500 text-center font-bold py-4'>
-            Temp-ProductList
+            로그인 로그 - 구현예정
           </p>
-        </div>
-        <div className='w-1/2 border border-blue-500 rounded-md my-6'>
-          <p className='text-blue-500 text-center font-bold py-4'>Temp</p>
         </div>
       </section>
     </>

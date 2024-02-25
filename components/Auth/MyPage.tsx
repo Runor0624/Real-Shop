@@ -24,13 +24,19 @@ export default function MyPage() {
         <label className='text-blue-500 font-bold py-4'>사용자 명</label>
         <input
           placeholder='아마도 사용자의 가입시 입력한 ID가 들어갈 부분입니다.'
-          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
+          className='text-center w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && data.userId}
+        />
+        <label className='text-blue-500 font-bold py-4'>권한</label>
+        <input
+          placeholder='아마도 사용자의 가입시 부여받은 권한값 부분입니다.'
+          className='text-center w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
+          value={data && data.audit}
         />
         <label className='text-blue-500 font-bold py-4'>가입 시간</label>
         <input
           placeholder='아마도 사용자의 가입시간이 들어갈 부분입니다.'
-          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
+          className='text-center w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
           value={data && moment(data.createDate).format('YYYY-MM-DD HH:mm:ss')}
         />
       </section>

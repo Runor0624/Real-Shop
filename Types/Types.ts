@@ -22,3 +22,10 @@ export interface LoginType {
   userId: string
   password: string
 }
+
+export interface UserListComponentType {
+  id: number
+  userId: string
+  audit: string
+  createDate: string
+}
