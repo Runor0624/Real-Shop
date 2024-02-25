@@ -29,3 +29,13 @@ export interface UserListComponentType {
   audit: string
   createDate: string
 }
+
+export interface ProductListComponenType {
+  id: number
+  userId: number
+  title: string
+  description: string
+  price: string
+  images?: string
+  createDate: string
+}

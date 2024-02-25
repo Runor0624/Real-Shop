@@ -1,20 +1,12 @@
 import moment from 'moment'
-
+import { ProductListComponenType } from '@/Types/Types'
 // 상품 리스트 관련 정보
-interface ITypes {
-  id: number
-  userId: number
-  title: string
-  description: string
-  price: string
-  images?: string
-  createDate: string
-}
+
 const ProductList = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL_KEY}/post`, {
     next: { revalidate: 5 },
   })
-  const postDatas: ITypes[] = await res.json()
+  const postDatas: ProductListComponenType[] = await res.json()
   return (
     <>
       <div className='overflow-x-auto'>
@@ -28,7 +20,7 @@ const ProductList = async () => {
             </tr>
           </thead>
           <tbody>
-            {postDatas.map((item: ITypes) => (
+            {postDatas.map((item: ProductListComponenType) => (
               <tr className='text-center' key={item.id}>
                 <td>{item.title}</td>
                 <td>이후 추가 예정</td>

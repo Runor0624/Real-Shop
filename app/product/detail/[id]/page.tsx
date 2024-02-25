@@ -1,7 +1,12 @@
 import DetailInfomation from '@/components/Product/Detail/DetailInfomation'
 
 // 아마도 상품의 상세페이지
+import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Product Detail Page',
+  description: '상품 상세 페이지 입니다.',
+}
 export default function page() {
   return (
     <>

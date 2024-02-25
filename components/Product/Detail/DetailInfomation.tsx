@@ -17,7 +17,9 @@ export default function DetailInfomation() {
           <GoToCartButton />
         </div>
       </section>
-      <DetailImage />
+      <section className='w-2/3 border-t-2 border-blue-500 m-auto'>
+        <DetailImage />
+      </section>
     </>
   )
 }

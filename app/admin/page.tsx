@@ -1,5 +1,6 @@
 // 관리자 페이지 초안
 import LogIcon from '@/components/Admin/ETC/LogIcon'
+import Infomation from '@/components/Admin/Infomation/Infomation'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,7 +18,9 @@ export default function page() {
         <LogIcon />
       </div>
 
-      <div>{/* 아마도 상품이나 사용자 관련 카운트 정보 제공하는 부분? */}</div>
+      <div className='flex flex-col m-auto items-center'>
+        <Infomation />
+      </div>
     </>
   )
 }
