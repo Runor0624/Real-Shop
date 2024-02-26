@@ -40,3 +40,17 @@ export interface ProductListComponenType {
   images?: string
   createDate: string
 }
+
+export interface NoticeAddComponentType {
+  userId: number
+  title: string
+  description: string
+}
+
+export interface NoticeViewComponentType {
+  id: number
+  title: string
+  description: string
+  createDate: string
+  userId: number
+}
