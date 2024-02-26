@@ -33,6 +33,7 @@ export interface UserListComponentType {
 export interface ProductListComponenType {
   id: number
   userId: number
+  userIp?: string
   title: string
   description: string
   price: string

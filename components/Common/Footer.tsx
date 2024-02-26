@@ -15,6 +15,13 @@ export default function Footers() {
           >
             방명록
           </Link>
+          <AiOutlineEdit className='text-blue-500' />
+          <Link
+            href='/notice'
+            className='text-center font-bold text-blue-500 cursor-pointer'
+          >
+            공지사항
+          </Link>
         </>
       </div>
     </footer>

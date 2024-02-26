@@ -48,7 +48,7 @@ export default function SignUpComponent() {
       <input
         {...register('audit', { required: true })}
         className='w-2/3 h-10 rounded-md my-2 bg-white hidden'
-        value='0006'
+        value='Normal'
       />
 
       <button
