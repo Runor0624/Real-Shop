@@ -54,3 +54,25 @@ export interface NoticeViewComponentType {
   createDate: string
   userId: number
 }
+
+export interface ProductAddComponentType {
+  id: number
+  userId: number
+  title: string
+  description: string
+  category: string
+  price: string
+  images: string
+  createDate?: string
+}
+
+export interface ProductCardComponentType {
+  id: number
+  userId: number
+  userIp?: string
+  title: string
+  category: string
+  price: string
+  images: string
+  createDate: string
+}
