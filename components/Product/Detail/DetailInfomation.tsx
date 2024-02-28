@@ -53,8 +53,7 @@ export default function DetailInfomation() {
           </h1>
           <p className='text-center'>상품 설명 : {isData.description}</p>
           <p className='text-blue-500 text-center text-xl font-bold py-4'>
-            상품 가격 :{' '}
-            {[isData.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')]}원
+            상품 가격 : {isData.price}원
           </p>
           <GoToCartButton />
         </div>
