@@ -3,7 +3,7 @@
 import { AiOutlinePlus } from 'react-icons/ai'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { useAuthStore } from '@/app/Util/Zustand/store'
 import { ProductAddComponentType } from '@/Types/Types'
 
@@ -40,6 +40,8 @@ export default function ProductAdd() {
         },
       )
       console.log(response)
+      alert('등록 성공!')
+      router.push('/')
     } catch (err: any) {
       if (err.response.status >= 400 && err.response.status < 500) {
         alert('입력 데이터를 확인해주세요')
@@ -57,6 +59,7 @@ export default function ProductAdd() {
       >
         <input
           placeholder='userId'
+          className='hidden'
           {...register('userId', { required: true })}
           value={id}
         />
@@ -86,10 +89,24 @@ export default function ProductAdd() {
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         />
 
-        <input
-          placeholder='카테고리'
-          {...register('category', { required: true })}
-          className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
+        <label className='py-2 text-blue-500 font-bold'>
+          상품 카테고리를 선택하시오
+        </label>
+
+        <Controller
+          name='category'
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => (
+            <select
+              {...field}
+              className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
+            >
+              <option value=''>선택하세요</option>
+              <option value='menu1'>Menu1</option>
+              <option value='menu2'>Menu2</option>
+            </select>
+          )}
         />
         <label className='py-2 text-blue-500 font-bold'>
           상품 대표 이미지를 입력하시오

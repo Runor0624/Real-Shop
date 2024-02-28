@@ -10,20 +10,43 @@ const ProductCard = async () => {
   const posts: ProductCardComponentType[] = await res.json()
   return (
     <>
+      <div className='flex flex-row justify-center py-2'>
+        <p className='badge badge-secondary text-blue-500 font-bold m-2'>
+          임시- 필터 조건 추가 예정
+        </p>
+        <p className='badge badge-secondary text-blue-500 font-bold m-2'>
+          임시- 필터 조건 추가 예정2
+        </p>
+      </div>
+      <div>
+        <input
+          className='w-full bg-white'
+          placeholder='추후 검색 기능을 추가하거나 검색페이지로 이동시킬 예정'
+        />
+      </div>
       <section className='grid grid-cols-4 justify-items-center	 m-auto'>
         {posts.map((post) => (
           <section
             className='w-3/4 h-max bg-white rounded-xl m-1'
             key={post.id}
           >
-            <h1 className='text-xl font-bold py-2'>{post.id}</h1>
-            <Image
-              src={`${process.env.NEXT_PUBLIC_URL_KEY}/${post.images}`}
-              alt='상품 이미지'
-              width={100}
-              height={100}
-            />
-            <p className='text-sm py-2'>{post.title}</p>
+            <Link href={`/product/detail/${post.id}`}>
+              <Image
+                src={`${process.env.NEXT_PUBLIC_URL_KEY}/${post.images}`}
+                alt='상품 이미지'
+                width={400}
+                height={100}
+              />
+              <p className='text-sm font-bold p-2'>상품 제목 : {post.title}</p>
+              <p className=' text-violet-600 font-bold p-2'>
+                상품 가격 :{' '}
+                {[post.price].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                원
+              </p>
+              <p className='badge badge-secondary text-blue-500 font-bold m-2'>
+                카테고리 : {post.category}
+              </p>
+            </Link>
           </section>
         ))}
       </section>
