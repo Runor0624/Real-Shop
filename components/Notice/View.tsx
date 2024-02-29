@@ -11,7 +11,10 @@ const View = async () => {
     <>
       <div className='flex flex-col justify-center items-center'>
         {Views.map((item: NoticeViewComponentType) => (
-          <div className='collapse collapse-plus bg-base-200' key={item.id}>
+          <div
+            className='collapse collapse-plus bg-base-200 w-2/3'
+            key={item.id}
+          >
             <input type='radio' name='my-accordion-3' defaultChecked />
             <div className='collapse-title text-xl font-medium'>
               {item.title}

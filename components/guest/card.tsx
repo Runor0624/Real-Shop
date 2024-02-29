@@ -9,7 +9,7 @@ const Card = async () => {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2'>
       {Cards.map((item: GuestCardType) => (
-        <section className='m-auto my-2 w-1/2' key={item.id}>
+        <section className='m-auto my-2 w-max' key={item.id}>
           <div className='card w-96 bg-base-100'>
             <div className='card-body items-center text-center'>
               <h2 className='card-title'>작성자 : {item.userId}</h2>
