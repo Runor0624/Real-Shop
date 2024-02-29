@@ -17,7 +17,12 @@ export default function Page() {
         당신의 상품 구매에 감사합니다, 입금을 확인하는대로 배송이 준비될
         예정입니다.
       </p>
-      <Link href='/'>Go To Main</Link>
+      <Link
+        href='/'
+        className='text-center text-blue-500 font-bold bg-black h-10 py-2 rounded-xl'
+      >
+        Go To Main
+      </Link>
     </section>
   )
 }

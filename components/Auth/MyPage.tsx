@@ -18,6 +18,11 @@ export default function MyPage() {
     },
   })
 
+  if (isLoading) {
+    return (
+      <p className='text-center text-2xl text-red-600 font-bold'>Loading...</p>
+    )
+  }
   return (
     <>
       <section className='flex flex-col justify-center items-center m-auto my-6 w-1/2'>

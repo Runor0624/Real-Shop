@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function LogIcon() {
   return (
     <>
-      <section className='grid grid-cols-4 justify-items-center'>
+      <section className='grid grid-cols-2 justify-items-center'>
         <div className='w-1/2 border border-blue-500 rounded-md my-6'>
           <Link href='/admin/userlist'>
             <p className='text-blue-500 text-center font-bold py-4'>UserList</p>

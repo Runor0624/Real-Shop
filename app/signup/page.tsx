@@ -20,7 +20,7 @@ export default function Page() {
       <section className='flex flex-col justify-center items-center'>
         <Link
           href='/login'
-          className='text-center text-sm text-slate-600 font-bold py-4'
+          className='text-center text-blue-500 font-bold bg-black h-10 py-2 rounded-xl'
         >
           회원이면 여기로 이동하세요!
         </Link>

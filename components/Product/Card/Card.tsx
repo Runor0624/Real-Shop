@@ -18,12 +18,7 @@ const ProductCard = async () => {
           임시- 필터 조건 추가 예정2
         </p>
       </div>
-      <div>
-        <input
-          className='w-full bg-white'
-          placeholder='추후 검색 기능을 추가하거나 검색페이지로 이동시킬 예정'
-        />
-      </div>
+
       <section className='grid grid-cols-4 justify-items-center	 m-auto'>
         {posts.map((post) => (
           <section
