@@ -1,5 +1,6 @@
 import ProductAddButton from '@/components/Product/AddButton'
 import ProductCard from '@/components/Product/Card/Card'
+import ProductSearchInput from '@/components/Product/Search/Input'
 import Banner from '@/components/Product/Slick/Slick'
 import type { Metadata } from 'next'
 
@@ -16,6 +17,9 @@ export default function Home() {
       </h1>
       <section className='w-full h-1/4'>
         <Banner />
+      </section>
+      <section className='flex flex-row justify-center'>
+        <ProductSearchInput />
       </section>
       <ProductCard />
       <ProductAddButton />
