@@ -19,7 +19,7 @@ export default function Notfound() {
       </p>
       <Link
         href='/'
-        className='text-center text-blue-500 font-bold bg-black h-10 py-2'
+        className='text-center text-blue-500 font-bold bg-black h-10 py-2 rounded-xl'
       >
         메인 페이지로 돌아가기
       </Link>
