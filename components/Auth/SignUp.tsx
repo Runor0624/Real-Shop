@@ -4,9 +4,15 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { SignUpType } from '@/Types/Types'
 import { AiOutlinePlus } from 'react-icons/ai'
+import { useAuthStore } from '@/app/Util/Zustand/store'
 
 export default function SignUpComponent() {
   const router = useRouter()
+  const { userId, audit, id } = useAuthStore((state) => ({
+    userId: state.userId,
+    audit: state.audit,
+    id: state.id,
+  }))
   const {
     register,
     handleSubmit,
@@ -25,6 +31,12 @@ export default function SignUpComponent() {
       alert('실패')
     }
   }
+  /* 만약 로그인된 사용자가 회원가입 페이지에 접근시 이 부분 사용 */
+  if (audit.length >= 1 || userId.length >= 1) {
+    return router.push('/')
+  }
+  /* 만약 로그인된 사용자가 회원가입 페이지에 접근시 이 부분 사용 */
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -36,6 +48,9 @@ export default function SignUpComponent() {
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='사용할 UserId를 입력하세요'
       />
+      {errors.userId && (
+        <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+      )}
 
       <label className='py-2 text-blue-500 font-bold'>Password</label>
       <input
@@ -44,6 +59,9 @@ export default function SignUpComponent() {
         type='password'
         placeholder='사용할 비밀번호를 입력하세요'
       />
+      {errors.password && (
+        <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+      )}
 
       <input
         {...register('audit', { required: true })}
