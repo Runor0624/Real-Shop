@@ -4,9 +4,15 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { SignUpType } from '@/Types/Types'
 import { AiOutlinePlus } from 'react-icons/ai'
+import { useAuthStore } from '@/app/Util/Zustand/store'
 
 export default function SignUpComponent() {
   const router = useRouter()
+  const { userId, audit, id } = useAuthStore((state) => ({
+    userId: state.userId,
+    audit: state.audit,
+    id: state.id,
+  }))
   const {
     register,
     handleSubmit,
@@ -25,6 +31,12 @@ export default function SignUpComponent() {
       alert('실패')
     }
   }
+  /* 만약 로그인된 사용자가 회원가입 페이지에 접근시 이 부분 사용 */
+  if (audit.length >= 1 || userId.length >= 1) {
+    return router.push('/')
+  }
+  /* 만약 로그인된 사용자가 회원가입 페이지에 접근시 이 부분 사용 */
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
