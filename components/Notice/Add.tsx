@@ -50,7 +50,7 @@ export default function AddNotice() {
           className='hidden'
           value={id}
         />
-        <label className='text-center text-xl text-red-600 font-bold'>
+        <label className='lg:text-xl text-base text-center text-red-600 font-bold'>
           공지사항에 작성할 제목을 입력하시오.
         </label>
         <input
@@ -58,7 +58,7 @@ export default function AddNotice() {
           {...register('title', { required: true })}
           className='w-full sm:w-3/4 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
-        <label className='text-center text-xl text-red-600 font-bold'>
+        <label className='lg:text-xl text-base text-center text-red-600 font-bold'>
           공지사항에 작성할 설명을 입력하시오.
         </label>
         <input

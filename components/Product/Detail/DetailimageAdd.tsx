@@ -2,18 +2,24 @@
 'use client'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { useRouter } from 'next/navigation'
+import { useAuthStore } from '@/app/Util/Zustand/store'
 
 export default function DetailImageAdd() {
+  const { audit } = useAuthStore((state) => ({
+    audit: state.audit,
+  }))
   const router = useRouter()
 
   return (
     <>
-      <button
-        className='btn btn-success text-white'
-        onClick={() => router.push('/product/detail/add')}
-      >
-        <AiOutlinePlus /> Adds
-      </button>
+      {audit === `${process.env.NEXT_PUBLIC_ADMIN_AUDIT}` && (
+        <button
+          className='btn btn-success text-white'
+          onClick={() => router.push('/product/detail/add')}
+        >
+          <AiOutlinePlus /> Adds
+        </button>
+      )}
     </>
   )
 }

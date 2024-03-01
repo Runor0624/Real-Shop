@@ -19,10 +19,10 @@ const ProductCard = async () => {
         </p>
       </div>
 
-      <section className='grid grid-cols-4 justify-items-center	 m-auto'>
+      <section className='lg:grid grid-cols-4 justify-items-center m-auto flex flex-col justify-center items-center'>
         {posts.map((post) => (
           <section
-            className='w-3/4 h-max bg-white rounded-xl m-1'
+            className='lg:w-3/4 w-max h-max bg-white rounded-xl m-1 hover:scale-105 transition duration-300'
             key={post.id}
           >
             <Link href={`/product/detail/${post.id}`}>

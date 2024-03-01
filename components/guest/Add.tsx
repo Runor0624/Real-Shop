@@ -37,11 +37,15 @@ export default function Add() {
         <h1 className='text-center text-xl text-blue-500 font-bold py-2'>
           방명록 추가
         </h1>
+        <label className='text-center text-blue-600'>
+          사용할 ID를 입력하세요
+        </label>
         <input
           placeholder='userId'
           {...register('userId', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
+        <label className='text-center text-blue-600'>댓글을 입력하세요</label>
         <input
           placeholder='comment'
           {...register('comment', { required: true })}

@@ -4,7 +4,7 @@ import DetailImageAdd from './DetailimageAdd'
 export default function DetailImage() {
   return (
     <>
-      <h1 className='text-center text-xl text-blue-500 font-bold py-4'>
+      <h1 className='lg:text-2xl text-base text-center text-blue-600 font-bold py-4'>
         상세이미지 / 텍스트가 들어가는 부분
       </h1>
       <DetailImageAdd />
