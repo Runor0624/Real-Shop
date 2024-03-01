@@ -71,6 +71,9 @@ export default function ProductAdd() {
           {...register('title', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         />
+        {errors.title && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <label className='py-2 text-blue-500 font-bold'>
           상품 설명을 입력하시오
         </label>
@@ -79,6 +82,9 @@ export default function ProductAdd() {
           {...register('description', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         />
+        {errors.description && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <label className='py-2 text-blue-500 font-bold'>
           상품 가격을 입력하시오
         </label>
@@ -88,6 +94,9 @@ export default function ProductAdd() {
           {...register('price', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         />
+        {errors.price && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
 
         <label className='py-2 text-blue-500 font-bold'>
           상품 카테고리를 선택하시오

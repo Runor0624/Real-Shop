@@ -58,6 +58,9 @@ export default function AddNotice() {
           {...register('title', { required: true })}
           className='w-full sm:w-3/4 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
+        {errors.title && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <label className='lg:text-xl text-base text-center text-red-600 font-bold'>
           공지사항에 작성할 설명을 입력하시오.
         </label>
@@ -66,6 +69,9 @@ export default function AddNotice() {
           {...register('description', { required: true })}
           className='w-full sm:w-3/4 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
+        {errors.description && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <button
           className='my-2 btn btn-md btn-success text-white w-full sm:w-1/2'
           type='submit'

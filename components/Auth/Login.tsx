@@ -46,7 +46,9 @@ export default function LoginComponent() {
         className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500'
         placeholder='가입한 UserId를 입력하세요'
       />
-
+      {errors.userId && (
+        <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+      )}
       <label className='py-2 text-blue-500 font-bold'>Password</label>
       <input
         {...register('password', { required: true })}
@@ -54,7 +56,9 @@ export default function LoginComponent() {
         type='password'
         placeholder='가입한 비밀번호를 입력하세요'
       />
-
+      {errors.password && (
+        <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+      )}
       <button
         className='my-2 btn btn-md btn-success text-white w-full sm:w-1/2'
         type='submit'

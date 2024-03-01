@@ -45,12 +45,18 @@ export default function Add() {
           {...register('userId', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
+        {errors.userId && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <label className='text-center text-blue-600'>댓글을 입력하세요</label>
         <input
           placeholder='comment'
           {...register('comment', { required: true })}
           className='w-full sm:w-1/2 h-10 rounded-md my-2 text-blue-500 bg-white'
         />
+        {errors.comment && (
+          <p className='text-red-600 font-bold py-4'>누락된 값이 있어요!</p>
+        )}
         <button
           className='my-2 btn btn-md btn-success text-white w-full sm:w-1/2'
           type='submit'
